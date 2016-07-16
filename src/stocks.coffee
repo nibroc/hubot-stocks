@@ -22,6 +22,9 @@ module.exports = (robot) ->
   robot.respond /stock ([a-zA-Z]+)$/, (res) =>
     @service.quoteForSymbol(res.match[1])
       .then (quote) ->
-        res.send formatQuote(quote)
+        if quote
+          res.send formatQuote(quote)
+        else
+          res.send "No quote found for symbol #{res.match[1].toUpperCase()}"
       .catch (err) ->
         res.send "Unexpected error while fetching quote: #{err}"

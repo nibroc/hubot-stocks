@@ -10,8 +10,9 @@ fetchYql = (http, yql, callback) ->
 
 parseQuoteForSymbol = (response) ->
   results = response.query.results.quote
+  return null if results.Name == null
   {
-    symbol: results.symbol,
+    symbol: results.symbol.toUpperCase(),
     name: results.Name,
     price: results.LastTradePriceOnly,
     change: results.Change,
