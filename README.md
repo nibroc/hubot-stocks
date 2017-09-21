@@ -18,7 +18,7 @@ Then add **hubot-stocks** to your `external-scripts.json`:
 
 ```json
 [
-  "hubot-hubot-stocks"
+  "hubot-stocks"
 ]
 ```
 
