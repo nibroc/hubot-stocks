@@ -4,7 +4,7 @@ fetchYql = (http, yql, callback) ->
   http.query(
     q: yql, 
     format: 'json', 
-    env: 'http://datatables.org/alltables.env'
+    env: 'store://datatables.org/alltableswithkeys'
   ).get() (err, res, body) ->
     callback(err, res, body)
 

@@ -10,7 +10,7 @@
 StockService = require './service/stock'
 
 formatQuote = (quote) ->
-  "#{quote.name} (#{quote.symbol}) | Price: #{quote.price} (#{quote.change}%) | " + 
+  "#{quote.name} (#{quote.symbol}) | Price: #{quote.price} (#{quote.change}) | " +
   "Day: #{quote.day.low} - #{quote.day.high} | " +
   "Year: #{quote.year.low} - #{quote.year.high} | " +
   "Volume: #{quote.volume} (avg #{quote.averageVolume}) | " +
